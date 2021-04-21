@@ -1,3 +1,4 @@
 #!/bin/bash
 
-scp ./target/* pihole:/var/www/html/essen
+scp ./public/build/* pihole:/var/www/html/build
+scp ./public/* pihole:/var/www/html/
