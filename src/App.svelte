@@ -1,10 +1,44 @@
 <script>
-	export let name = 'world';
+	let meals = [ 
+		 'Spinat, Kartoffelbrei & Fischstäbchen'
+		, 'Eierkuchen'
+		, 'Brot'
+		, 'Kaiserschmarrn'
+		, 'Pizza'
+		, 'Nudeln mit Tomatensauce'
+		, 'Bratkartoffeln'
+		, 'Gemüsesuppe'
+		, 'Auberginen arabisch'
+		, 'Lasagne'
+		, 'Käsespätzle'
+		, 'Burger'
+		, 'Milchreis'
+		, 'Waffeln'
+		, 'Gemüsepfanne'
+		, 'Thai Aroi'
+		, 'Indisch'
+		, 'Nudelsuppe'
+		, 'Serviettenknödel'
+		, 'Salat'
+		, 'Penne mit Zucchini'
+		, 'Linsensuppe'
+		, 'gebratener Reis mit Gemüse'
+		, '"Blutsuppe"'
+	];
+
+	let zufallsEssen;
+
+	function wuerfeln() {
+		zufallsEssen = meals[Math.floor(Math.random() * meals.length)];
+	}
+	wuerfeln();
 </script>
 
 <main>
-	<h1>Hello {name}!</h1>
-	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
+	<h1>Heute essen wir <br /> {zufallsEssen}</h1>
+	<button on:click={wuerfeln}>
+		Nee, was andreres
+	</button>
 </main>
 
 <style>
