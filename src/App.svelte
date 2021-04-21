@@ -68,11 +68,13 @@
 			<a href="https://www.chefkoch.de/rezept-des-tages/">Rezept des Tages</a>
 		</h2>
 	{:else}
+		<div id="aussuchen">
 		<h1>Heute essen wir <br /> <span>{zufallsEssen}</span></h1>
 
 		<button on:click={neuWuerfeln(zufallsEssen)}>
 			Nee, was andreres
 		</button>
+		</div>
 	{/if}
 	
 	{#if raus.length>0}
@@ -89,17 +91,21 @@
 	main {
 		text-align: center;
 		padding: 1em;
-		max-width: 240px;
 		margin: 0 auto;
+		height: 100%;
+	}
+
+	#aussuchen {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		height: 93%;
 	}
 
 	#aussortiert p {
 		text-decoration: line-through;
 	}
-	h1 {
-		text-transform: uppercase;
-		height: 4em;
-	}
+
 	h1 span {
 		text-transform: none;
 		font-weight: bold;
@@ -107,7 +113,16 @@
 
 	@media (min-width: 640px) {
 		main {
-			max-width: none;
+			max-width: 640px;
+		}
+	}
+	@media (max-width: 640px) {
+		h1 {
+			font-size: 2rem;
+		}
+		h1 span {
+			line-break: anywhere;
+			font-size: 3rem;
 		}
 	}
 </style>
