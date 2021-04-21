@@ -1,42 +1,42 @@
 <script>
 	let meals = [ 
-		 'Spinat, Kartoffelbrei & Fischstäbchen'
-		, 'Eierkuchen'
+		 'Spinat, Kar&shy;toffel&shy;brei & Fisch&shy;stäb&shy;chen'
+		, 'Ei&shy;er&shy;ku&shy;chen'
 		, 'Brot'
-		, 'Kaiserschmarrn'
+		, 'Kai&shy;ser&shy;schmarrn'
 		, 'Pizza'
-		, 'Nudeln mit Tomatensauce'
-		, 'Bratkartoffeln'
-		, 'Gemüsesuppe'
-		, 'Auberginen arabisch'
-		, 'Lasagne'
-		, 'Käsespätzle'
-		, 'Burger'
-		, 'Milchreis'
+		, 'Nudeln mit To&shy;ma&shy;ten&shy;sauce'
+		, 'Brat&shy;kar&shy;toffeln'
+		, 'Ge&shy;mü&shy;se&shy;sup&shy;pe'
+		, 'Au&shy;ber&shy;gi&shy;nen ara&shy;bisch'
+		, 'La&shy;sa&shy;gne'
+		, 'Kä&shy;se&shy;spät&shy;zle'
+		, 'Bur&shy;ger'
+		, 'Milch&shy;reis'
 		, 'Waffeln'
-		, 'Gemüsepfanne'
+		, 'Ge&shy;mü&shy;se&shy;pfan&shy;ne'
 		, 'Thai Aroi'
-		, 'Indisch bestellen'
-		, 'Nudelsuppe'
-		, 'Serviettenknödel'
-		, 'Salat'
-		, 'Penne mit Zucchini'
-		, 'Linsensuppe'
-		, 'gebratener Reis mit Gemüse'
-		, '"Blutsuppe"'
-		, 'Picknick'
-		, 'Ofenkartoffel mit Quark'
-		, 'Lauchsuppe'
-		, 'Rahmwirsing'
-		, 'Thai Gemüsepfanne'
-		, 'Indische Gemüsepfanne'
-		, 'Kürbissuppe'
-		, 'Döner'
-		, 'falsches Frühstück'
-		, 'Blumenkohlsuppe'
-		, 'Gemüseauflauf'
-		, 'Ofengemüse'
-		, 'Rosmarinkartoffeln'
+		, 'In&shy;disch be&shy;stel&shy;len'
+		, 'Nu&shy;del&shy;suppe'
+		, 'Ser&shy;vietten&shy;knö&shy;del'
+		, 'Sa&shy;lat'
+		, 'Penne mit Zu&shy;cchi&shy;ni'
+		, 'Lin&shy;sen&shy;sup&shy;pe'
+		, 'ge&shy;bra&shy;ten&shy;er Reis mit Ge&shy;mü&shy;se'
+		, '"Blut&shy;suppe"'
+		, 'Pick&shy;nick'
+		, 'Ofen&shy;kar&shy;toffel mit Quark'
+		, 'Lauch&shy;suppe'
+		, 'Rahm&shy;wir&shy;sing'
+		, 'Thai Ge&shy;mü&shy;se&shy;pfanne'
+		, 'In&shy;dische Ge&shy;mü&shy;se&shy;pfanne'
+		, 'Kür&shy;bis&shy;suppe'
+		, 'Dö&shy;ner'
+		, 'fal&shy;sches Früh&shy;stück'
+		, 'Blu&shy;men&shy;kohl&shy;suppe'
+		, 'Ge&shy;mü&shy;se&shy;auf&shy;lauf'
+		, 'Ofen&shy;ge&shy;mü&shy;se'
+		, 'Ros&shy;ma&shy;rin&shy;kar&shy;toffeln'
 	];
 
 	// meals = meals.splice(0,2);
@@ -69,7 +69,7 @@
 		</h2>
 	{:else}
 		<div id="aussuchen">
-		<h1>Heute essen wir <br /> <span>{zufallsEssen}</span></h1>
+		<h1>Heute essen wir <br /> <span>{@html zufallsEssen}</span></h1>
 
 		<button on:click={neuWuerfeln(zufallsEssen)}>
 			Nee, was andreres
@@ -80,7 +80,7 @@
 	{#if raus.length>0}
 		<div id='aussortiert'>
 		{#each raus as x}
-			<p>{x}</p>
+			<p>{@html x}</p>
 		{/each}
 		</div>
 	{/if}
@@ -106,6 +106,13 @@
 		text-decoration: line-through;
 	}
 
+	button {
+		background-color: #444;
+		color: #bbb;
+		border: 1px solid black;
+		height: 4rem;
+	}
+
 	h1 span {
 		text-transform: none;
 		font-weight: bold;
@@ -121,7 +128,6 @@
 			font-size: 2rem;
 		}
 		h1 span {
-			line-break: anywhere;
 			font-size: 3rem;
 		}
 	}
