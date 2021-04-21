@@ -49,7 +49,7 @@
 
 <main>
 	{#if !zufallsEssen}
-		nix mehr in der liste
+		<p>Jetzt weiß ich auch nix mehr... 😒</p>
 	{:else}
 		<h1>Heute essen wir <br /> <span>{zufallsEssen}</span></h1>
 		<button on:click={neuWuerfeln(zufallsEssen)}>
