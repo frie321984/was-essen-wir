@@ -97,9 +97,6 @@
 		text-decoration: line-through;
 	}
 	h1 {
-		color: #ff3e00;
-		font-size: 4em;
-		font-weight: 100;
 		text-transform: uppercase;
 		height: 4em;
 	}
