@@ -24,6 +24,8 @@
 		, 'Linsensuppe'
 		, 'gebratener Reis mit Gemüse'
 		, '"Blutsuppe"'
+		, 'Picknick'
+		, 'Ofenkartoffel mit Quark'
 	];
 
 	let zufallsEssen;
@@ -35,7 +37,7 @@
 </script>
 
 <main>
-	<h1>Heute essen wir <br /> {zufallsEssen}</h1>
+	<h1>Heute essen wir <br /> <span>{zufallsEssen}</span></h1>
 	<button on:click={wuerfeln}>
 		Nee, was andreres
 	</button>
@@ -51,9 +53,13 @@
 
 	h1 {
 		color: #ff3e00;
-		text-transform: uppercase;
 		font-size: 4em;
 		font-weight: 100;
+		text-transform: uppercase;
+	}
+	h1 span {
+		text-transform: none;
+		font-weight: bold;
 	}
 
 	@media (min-width: 640px) {
