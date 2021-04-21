@@ -16,7 +16,7 @@
 		, 'Waffeln'
 		, 'Gemüsepfanne'
 		, 'Thai Aroi'
-		, 'Indisch'
+		, 'Indisch bestellen'
 		, 'Nudelsuppe'
 		, 'Serviettenknödel'
 		, 'Salat'
@@ -26,6 +26,17 @@
 		, '"Blutsuppe"'
 		, 'Picknick'
 		, 'Ofenkartoffel mit Quark'
+		, 'Lauchsuppe'
+		, 'Rahmwirsing'
+		, 'Thai Gemüsepfanne'
+		, 'Indische Gemüsepfanne'
+		, 'Kürbissuppe'
+		, 'Döner'
+		, 'falsches Frühstück'
+		, 'Blumenkohlsuppe'
+		, 'Gemüseauflauf'
+		, 'Ofengemüse'
+		, 'Rosmarinkartoffeln'
 	];
 
 	// meals = meals.splice(0,2);
