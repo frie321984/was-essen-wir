@@ -28,7 +28,7 @@
 		, 'Ofenkartoffel mit Quark'
 	];
 
-	
+	let raus = [];
 
 	let zufallsEssen;
 
@@ -38,6 +38,9 @@
 
 	function neuWuerfeln(schmecktHeuteNicht) {
 		meals = meals.filter(meal => meal != schmecktHeuteNicht);
+		raus.push(schmecktHeuteNicht);
+		raus = raus;
+		console.log(raus);
 		wuerfeln();
 	}
 
@@ -52,6 +55,14 @@
 		<button on:click={neuWuerfeln(zufallsEssen)}>
 			Nee, was andreres
 		</button>
+
+		{#if raus.length>0}
+			<div id='aussortiert'>
+			{#each raus as x}
+				<p>{x}</p>
+			{/each}
+			</div>
+		{/if}
 	{/if}
 </main>
 
@@ -63,6 +74,9 @@
 		margin: 0 auto;
 	}
 
+	#aussortiert p {
+		text-decoration: line-through;
+	}
 	h1 {
 		color: #ff3e00;
 		font-size: 4em;
