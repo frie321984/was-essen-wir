@@ -28,7 +28,7 @@
 		, 'Ofenkartoffel mit Quark'
 	];
 
-	/* meals = meals.splice(0,2); */
+	// meals = meals.splice(0,2);
 
 	let raus = [];
 
@@ -63,15 +63,14 @@
 			Nee, was andreres
 		</button>
 	{/if}
-
 	
-		{#if raus.length>0}
-			<div id='aussortiert'>
-			{#each raus as x}
-				<p>{x}</p>
-			{/each}
-			</div>
-		{/if}
+	{#if raus.length>0}
+		<div id='aussortiert'>
+		{#each raus as x}
+			<p>{x}</p>
+		{/each}
+		</div>
+	{/if}
 	
 </main>
 
