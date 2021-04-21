@@ -28,19 +28,31 @@
 		, 'Ofenkartoffel mit Quark'
 	];
 
+	
+
 	let zufallsEssen;
 
 	function wuerfeln() {
 		zufallsEssen = meals[Math.floor(Math.random() * meals.length)];
 	}
+
+	function neuWuerfeln(schmecktHeuteNicht) {
+		meals = meals.filter(meal => meal != schmecktHeuteNicht);
+		wuerfeln();
+	}
+
 	wuerfeln();
 </script>
 
 <main>
-	<h1>Heute essen wir <br /> <span>{zufallsEssen}</span></h1>
-	<button on:click={wuerfeln}>
-		Nee, was andreres
-	</button>
+	{#if !zufallsEssen}
+		nix mehr in der liste
+	{:else}
+		<h1>Heute essen wir <br /> <span>{zufallsEssen}</span></h1>
+		<button on:click={neuWuerfeln(zufallsEssen)}>
+			Nee, was andreres
+		</button>
+	{/if}
 </main>
 
 <style>
