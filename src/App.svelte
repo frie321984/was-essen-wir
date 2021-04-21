@@ -28,6 +28,8 @@
 		, 'Ofenkartoffel mit Quark'
 	];
 
+	/* meals = meals.splice(0,2); */
+
 	let raus = [];
 
 	let zufallsEssen;
@@ -49,13 +51,20 @@
 
 <main>
 	{#if !zufallsEssen}
-		<p>Jetzt weiß ich auch nix mehr... 😒</p>
+		<h1>Jetzt weiß ich auch nix mehr... 😒</h1>
+		
+		<h2>Schau halt mal hier: 
+			<a href="https://www.chefkoch.de/rezept-des-tages/">Rezept des Tages</a>
+		</h2>
 	{:else}
 		<h1>Heute essen wir <br /> <span>{zufallsEssen}</span></h1>
+
 		<button on:click={neuWuerfeln(zufallsEssen)}>
 			Nee, was andreres
 		</button>
+	{/if}
 
+	
 		{#if raus.length>0}
 			<div id='aussortiert'>
 			{#each raus as x}
@@ -63,7 +72,7 @@
 			{/each}
 			</div>
 		{/if}
-	{/if}
+	
 </main>
 
 <style>
@@ -82,6 +91,7 @@
 		font-size: 4em;
 		font-weight: 100;
 		text-transform: uppercase;
+		height: 4em;
 	}
 	h1 span {
 		text-transform: none;
