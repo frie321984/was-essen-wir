@@ -41,8 +41,6 @@
 
 	// meals = meals.splice(0,2);
 
-	let raus = [];
-
 	let zufallsEssen;
 
 	function wuerfeln() {
@@ -51,9 +49,6 @@
 
 	function neuWuerfeln(schmecktHeuteNicht) {
 		meals = meals.filter(meal => meal != schmecktHeuteNicht);
-		raus.push(schmecktHeuteNicht);
-		raus = raus;
-		console.log(raus);
 		wuerfeln();
 	}
 
@@ -77,14 +72,6 @@
 		</div>
 	{/if}
 	
-	{#if raus.length>0}
-		<div id='aussortiert'>
-		{#each raus as x}
-			<p>{@html x}</p>
-		{/each}
-		</div>
-	{/if}
-	
 </main>
 
 <style>
@@ -100,10 +87,6 @@
 		flex-direction: column;
 		justify-content: space-between;
 		height: 93%;
-	}
-
-	#aussortiert p {
-		text-decoration: line-through;
 	}
 
 	button {
