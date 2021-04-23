@@ -1,7 +1,5 @@
 <script>
 	import { fade } from 'svelte/transition';
-	const myhref = "" +window.location;
-	console.log(myhref);
 
 	let meals = [ 
 		 'Spinat, Kar&shy;toffel&shy;brei & Fisch&shy;stäb&shy;chen'
@@ -47,6 +45,11 @@
 
 	let zufallsEssen;
 
+	let start = true;
+	function starte() {
+		start = false;
+	}
+
 	function wuerfeln() {
 		zufallsEssen = meals[Math.floor(Math.random() * meals.length)];
 	}
@@ -58,10 +61,6 @@
 
 	wuerfeln();
 
-	let start = true;
-	function starte() {
-		start = false;
-	}
 </script>
 
 <main>
