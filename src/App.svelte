@@ -1,4 +1,8 @@
 <script>
+	import { fade } from 'svelte/transition';
+	const myhref = "" +window.location;
+	console.log(myhref);
+
 	let meals = [ 
 		 'Spinat, Kar&shy;toffel&shy;brei & Fisch&shy;stäb&shy;chen'
 		, 'Ei&shy;er&shy;ku&shy;chen'
@@ -53,25 +57,35 @@
 	}
 
 	wuerfeln();
+
+	let start = true;
+	function starte() {
+		start = false;
+	}
 </script>
 
 <main>
-	{#if !zufallsEssen}
-		<h1>Jetzt weiß ich auch nix mehr... 😒</h1>
-		
-		<h2>Schau halt mal hier: 
-			<a href="https://www.chefkoch.de/rezept-des-tages/">Rezept des Tages</a>
-		</h2>
-	{:else}
-		<div id="aussuchen">
-		<h1>Heute essen wir <br /> <span>{@html zufallsEssen}</span></h1>
+	{#if start}
+		<h1>Was essen wir heute?</h1>
 
-		<button on:click={neuWuerfeln(zufallsEssen)}>
-			Nee, was andreres
-		</button>
-		</div>
+		<button class="highlight" on:click={starte}>Sag's mir!</button>
+	{:else}
+		{#if !zufallsEssen}
+			<h1>Jetzt weiß ich auch nix mehr... 😒</h1>
+			
+			<h2>Schau halt mal hier: 
+				<a href="https://www.chefkoch.de/rezept-des-tages/">Rezept des Tages</a>
+			</h2>
+		{:else}
+			<div id="aussuchen" transition:fade="{{ duration: 500 }}">
+			<h1>Heute essen wir <br /> <span transition:fade="{{ duration: 2000, delay: 1000 }}">{@html zufallsEssen}</span></h1>
+
+			<button on:click={neuWuerfeln(zufallsEssen)}>
+				Nee, was andreres
+			</button>
+			</div>
+		{/if}
 	{/if}
-	
 </main>
 
 <style>
