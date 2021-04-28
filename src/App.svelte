@@ -5,12 +5,6 @@
 	import MenueVorschlag from './MenueVorschlag.svelte';
 	import AndersUeberlegenButton from './AndersUeberlegenButton.svelte';
 	import Button from './Button.svelte';
-	
-	let zufallsEssen;
-
-	const unsub = menueVorschlag.subscribe(value => {
-		zufallsEssen = value;
-	});
 
 	let start = true;
 	function starte() {
@@ -26,10 +20,12 @@
 
 		<Button on:click={starte}>Sag's mir!</Button>
 	{:else}
-		{#if !zufallsEssen}
+		{#if !{$menueVorschlag}}
 			<Ratlos />
 		{:else}
-			<div id="aussuchen" transition:fade="{{ duration: 500 }}">
+			<div id="aussuchen" 
+				transition:fade="{{ duration: 500 }}"
+			>
 				<h1>Heute essen wir <br /><MenueVorschlag /></h1>
 
 				<AndersUeberlegenButton />
