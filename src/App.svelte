@@ -1,21 +1,21 @@
 <script>
 	import { fade } from 'svelte/transition';
-	import { auswahl, zufall , entferne } from './Essen.js';
+	import { menueVorschlag, waehleZufaelligesMenue , ablehnenUndNeuVorschlagen } from './Essen.js';
 	
 	let zufallsEssen;
 
-	const unsub = auswahl.subscribe(value => {
+	const unsub = menueVorschlag.subscribe(value => {
 		zufallsEssen = value;
 	});
 
 	let start = true;
 	function starte() {
 		start = false;
-		zufall();
+		waehleZufaelligesMenue();
 	}
 
 	function neuWuerfeln(schmecktHeuteNicht) {
-		entferne(schmecktHeuteNicht);
+		ablehnenUndNeuVorschlagen(schmecktHeuteNicht);
 	}
 
 </script>

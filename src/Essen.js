@@ -1,6 +1,6 @@
 import { writable } from 'svelte/store';
 
-export const auswahl = writable(0);
+export const menueVorschlag = writable(0);
 
 let meals = [ 
 		'Spinat, Kar&shy;toffel&shy;brei & Fisch&shy;stäb&shy;chen'
@@ -43,11 +43,11 @@ let meals = [
 	, 'Kar&shy;tof&shy;fel&shy;gra&shy;tin'
 ];
 
-export function zufall() {
-	auswahl.update(_ => meals[Math.floor(Math.random() * meals.length)]);
+export function waehleZufaelligesMenue() {
+	menueVorschlag.update(_ => meals[Math.floor(Math.random() * meals.length)]);
 }
 
-export function entferne(schmecktHeuteNicht) {
+export function ablehnenUndNeuVorschlagen(schmecktHeuteNicht) {
 	meals = meals.filter(meal => meal != schmecktHeuteNicht);
-	zufall();
+	waehleZufaelligesMenue();
 }
