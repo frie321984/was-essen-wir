@@ -1,6 +1,7 @@
 <script>
 	import { fade } from 'svelte/transition';
 	import { menueVorschlag, waehleZufaelligesMenue , ablehnenUndNeuVorschlagen } from './Essen.js';
+	import Ratlos from './Ratlos.svelte';
 	
 	let zufallsEssen;
 
@@ -27,11 +28,7 @@
 		<button class="highlight" on:click={starte}>Sag's mir!</button>
 	{:else}
 		{#if !zufallsEssen}
-			<h1>Jetzt weiß ich auch nix mehr... 😒</h1>
-			
-			<h2>Schau halt mal hier: 
-				<a href="https://www.chefkoch.de/rezept-des-tages/">Rezept des Tages</a>
-			</h2>
+			<Ratlos />
 		{:else}
 			<div id="aussuchen" transition:fade="{{ duration: 500 }}">
 			<h1>Heute essen wir <br /> <span transition:fade="{{ duration: 2000, delay: 1000 }}">{@html zufallsEssen}</span></h1>
