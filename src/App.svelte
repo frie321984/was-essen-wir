@@ -39,6 +39,7 @@
 		, 'Ge&shy;mü&shy;se&shy;auf&shy;lauf'
 		, 'Ofen&shy;ge&shy;mü&shy;se'
 		, 'Ros&shy;ma&shy;rin&shy;kar&shy;toffeln'
+		, 'Kar&shy;tof&shy;fel&shy;gra&shy;tin'
 	];
 
 	// meals = meals.splice(0,2);
