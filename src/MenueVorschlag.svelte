@@ -17,6 +17,6 @@
 </style>
 
 <span 
-	transition:fade="{{ duration: 2000, delay: 1000 }}"
+	in:fade="{{ duration: 2000, delay: 1000 }}"
 >{@html $menueVorschlag}</span>
 

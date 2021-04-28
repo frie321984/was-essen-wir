@@ -1,6 +1,6 @@
 <script>
 	import { fade } from 'svelte/transition';
-	import { menueVorschlag, waehleZufaelligesMenue , ablehnenUndNeuVorschlagen } from './Essen.js';
+	import { waehleZufaelligesMenue } from './Essen.js';
 	import Ratlos from './Ratlos.svelte';
 	import MenueVorschlag from './MenueVorschlag.svelte';
 	import AndersUeberlegenButton from './AndersUeberlegenButton.svelte';
@@ -11,7 +11,6 @@
 		start = false;
 		waehleZufaelligesMenue();
 	}
-
 </script>
 
 <main>
@@ -20,17 +19,15 @@
 
 		<Button on:click={starte}>Sag's mir!</Button>
 	{:else}
-		{#if !{$menueVorschlag}}
-			<Ratlos />
-		{:else}
-			<div id="aussuchen" 
-				transition:fade="{{ duration: 500 }}"
-			>
-				<h1>Heute essen wir <br /><MenueVorschlag /></h1>
+		<Ratlos />
+		
+		<div id="aussuchen" 
+			in:fade="{{ duration: 500 }}"
+		>
+			<h1>Heute essen wir <br /><MenueVorschlag /></h1>
 
-				<AndersUeberlegenButton />
-			</div>
-		{/if}
+			<AndersUeberlegenButton />
+		</div>
 	{/if}
 </main>
 
