@@ -2,6 +2,7 @@
 	import { fade } from 'svelte/transition';
 	import { menueVorschlag, waehleZufaelligesMenue , ablehnenUndNeuVorschlagen } from './Essen.js';
 	import Ratlos from './Ratlos.svelte';
+	import MenueVorschlag from './MenueVorschlag.svelte';
 	
 	let zufallsEssen;
 
@@ -31,11 +32,11 @@
 			<Ratlos />
 		{:else}
 			<div id="aussuchen" transition:fade="{{ duration: 500 }}">
-			<h1>Heute essen wir <br /> <span transition:fade="{{ duration: 2000, delay: 1000 }}">{@html zufallsEssen}</span></h1>
+				<h1>Heute essen wir <br /><MenueVorschlag /></h1>
 
-			<button on:click={neuWuerfeln(zufallsEssen)}>
-				Nee, was andreres
-			</button>
+				<button on:click={neuWuerfeln(zufallsEssen)}>
+					Nee, was andreres
+				</button>
 			</div>
 		{/if}
 	{/if}
@@ -63,11 +64,6 @@
 		height: 4rem;
 	}
 
-	h1 span {
-		text-transform: none;
-		font-weight: bold;
-	}
-
 	@media (min-width: 640px) {
 		main {
 			max-width: 640px;
@@ -76,9 +72,6 @@
 	@media (max-width: 640px) {
 		h1 {
 			font-size: 2rem;
-		}
-		h1 span {
-			font-size: 3rem;
 		}
 	}
 </style>
