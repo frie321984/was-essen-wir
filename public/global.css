@@ -62,9 +62,11 @@ input:disabled {
 }
 
 button {
-	color: #333;
-	background-color: #f4f4f4;
 	outline: none;
+	background-color: #444;
+	color: #bbb;
+	border: 1px solid black;
+	height: 4rem;
 }
 
 button:disabled {

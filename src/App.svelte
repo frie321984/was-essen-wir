@@ -4,7 +4,6 @@
 	import Ratlos from './Ratlos.svelte';
 	import MenueVorschlag from './MenueVorschlag.svelte';
 	import AndersUeberlegenButton from './AndersUeberlegenButton.svelte';
-	import Button from './Button.svelte';
 
 	let start = true;
 	function starte() {
@@ -16,7 +15,7 @@
 	{#if start}
 		<h1>Was essen wir heute?</h1>
 
-		<Button on:click={starte}>Sag's mir!</Button>
+		<button on:click={starte}>Sag's mir!</button>
 	{:else}
 		<Ratlos />
 		<MenueVorschlag />
