@@ -1,15 +1,9 @@
 <script>
-import { fade } from 'svelte/transition';
-	import { menueVorschlag, waehleZufaelligesMenue , ablehnenUndNeuVorschlagen } from './Essen.js';
-	import MenueVorschlag from './MenueVorschlag.svelte';
-	import AndersUeberlegenButton from './AndersUeberlegenButton.svelte';
-	import Button from './Button.svelte';
-
+	import { fade } from 'svelte/transition';
+	import { menueVorschlag } from './Essen.js';
 
 	let essenUnbekannt = true;
-
 	const unsub = menueVorschlag.subscribe(v => essenUnbekannt = !v);
-
 </script>
 
 {#if essenUnbekannt}

@@ -1,6 +1,6 @@
 <script>
 	import { fade } from 'svelte/transition';
-	import { menueVorschlag, waehleZufaelligesMenue } from './Essen.js';
+	import { menueVorschlag } from './Essen.js';
 	import AndersUeberlegenButton from './AndersUeberlegenButton.svelte';
 
 	let essenUnbekannt = true;
