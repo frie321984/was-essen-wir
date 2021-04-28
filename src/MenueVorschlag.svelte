@@ -3,9 +3,8 @@
 	import { menueVorschlag } from './Essen.js';
 	import AndersUeberlegenButton from './AndersUeberlegenButton.svelte';
 
-	let essenUnbekannt = true;
-
-	const unsub = menueVorschlag.subscribe(v => essenUnbekannt = !v);
+	let display;
+	menueVorschlag.subscribe(v => display = v);
 </script>
 
 <style>
@@ -21,11 +20,15 @@
 	}
 </style>
 
-{#if !essenUnbekannt}
+{#if display}
 	<div id="aussuchen" in:fade="{{ duration: 500 }}">
 		<h1>Heute essen wir <br />
 			<span in:fade="{{ duration: 2000, delay: 1000 }}">
-				{@html $menueVorschlag}
+			{#if display.html}
+				{@html display.html}
+			{:else}
+				{display.name}
+			{/if}
 			</span>
 		</h1>
 

@@ -2,45 +2,45 @@ import { writable } from 'svelte/store';
 
 export const menueVorschlag = writable(0);
 
-let meals = [ 
-		'Spinat, Kar&shy;toffel&shy;brei & Fisch&shy;stäb&shy;chen'
-	, 'Ei&shy;er&shy;ku&shy;chen'
-	, 'Brot'
-	, 'Kai&shy;ser&shy;schmarrn'
-	, 'Pizza'
-	, 'Nudeln mit To&shy;ma&shy;ten&shy;sauce'
-	, 'Brat&shy;kar&shy;toffeln'
-	, 'Ge&shy;mü&shy;se&shy;sup&shy;pe'
-	, 'Au&shy;ber&shy;gi&shy;nen ara&shy;bisch'
-	, 'La&shy;sa&shy;gne'
-	, 'Kä&shy;se&shy;spät&shy;zle'
-	, 'Bur&shy;ger'
-	, 'Milch&shy;reis'
-	, 'Waffeln'
-	, 'Ge&shy;mü&shy;se&shy;pfan&shy;ne'
-	, 'Thai Aroi'
-	, 'In&shy;disch be&shy;stel&shy;len'
-	, 'Nu&shy;del&shy;suppe'
-	, 'Ser&shy;vietten&shy;knö&shy;del'
-	, 'Sa&shy;lat'
-	, 'Penne mit Zu&shy;cchi&shy;ni'
-	, 'Lin&shy;sen&shy;sup&shy;pe'
-	, 'ge&shy;bra&shy;ten&shy;er Reis mit Ge&shy;mü&shy;se'
-	, '"Blut&shy;suppe"'
-	, 'Pick&shy;nick'
-	, 'Ofen&shy;kar&shy;toffel mit Quark'
-	, 'Lauch&shy;suppe'
-	, 'Rahm&shy;wir&shy;sing'
-	, 'Thai Ge&shy;mü&shy;se&shy;pfanne'
-	, 'In&shy;dische Ge&shy;mü&shy;se&shy;pfanne'
-	, 'Kür&shy;bis&shy;suppe'
-	, 'Dö&shy;ner'
-	, 'fal&shy;sches Früh&shy;stück'
-	, 'Blu&shy;men&shy;kohl&shy;suppe'
-	, 'Ge&shy;mü&shy;se&shy;auf&shy;lauf'
-	, 'Ofen&shy;ge&shy;mü&shy;se'
-	, 'Ros&shy;ma&shy;rin&shy;kar&shy;toffeln'
-	, 'Kar&shy;tof&shy;fel&shy;gra&shy;tin'
+let meals = [
+	{ name: 'Döner' }
+	, { name: 'falsches Frühstück', html: 'fal&shy;sches Früh&shy;stück' }
+	, { name: 'Rosmarinkartoffeln', html: 'Ros&shy;ma&shy;rin&shy;kar&shy;toffeln' }
+	, { name: 'Spinat, Kartoffelbrei & Fischstäbchen', html: 'Spinat, Kar&shy;toffel&shy;brei & Fisch&shy;stäb&shy;chen'}
+	, { name: 'Eierkuchen', html: 'Ei&shy;er&shy;ku&shy;chen'}
+	, { html: 'Brot'}
+	, { name: 'Kaiserschmarrn', html: 'Kai&shy;ser&shy;schmarrn'}
+	, { name: 'Pizza'}
+	, { name: 'Nudeln mit Tomatensauce', html: 'Nudeln mit To&shy;ma&shy;ten&shy;sauce'}
+	, { html: 'Brat&shy;kar&shy;toffeln'}
+	, { html: 'Ge&shy;mü&shy;se&shy;sup&shy;pe'}
+	, { html: 'Au&shy;ber&shy;gi&shy;nen ara&shy;bisch'}
+	, { html: 'La&shy;sa&shy;gne'}
+	, { html: 'Kä&shy;se&shy;spät&shy;zle'}
+	, { html: 'Bur&shy;ger'}
+	, { html: 'Milch&shy;reis'}
+	, { name: 'Waffeln'}
+	, { html: 'Ge&shy;mü&shy;se&shy;pfan&shy;ne'}
+	, { name: 'Thai Aroi'}
+	, { html: 'In&shy;disch be&shy;stel&shy;len'}
+	, { html: 'Nu&shy;del&shy;suppe'}
+	, { html: 'Ser&shy;vietten&shy;knö&shy;del'}
+	, { name: 'Salat'}
+	, { html: 'Penne mit Zu&shy;cchi&shy;ni'}
+	, { html: 'Lin&shy;sen&shy;sup&shy;pe'}
+	, { html: 'ge&shy;bra&shy;ten&shy;er Reis mit Ge&shy;mü&shy;se'}
+	, { html: '"Blut&shy;suppe"'}
+	, { html: 'Pick&shy;nick'}
+	, { html: 'Ofen&shy;kar&shy;toffel mit Quark'}
+	, { html: 'Lauch&shy;suppe'}
+	, { html: 'Rahm&shy;wir&shy;sing'}
+	, { html: 'Thai Ge&shy;mü&shy;se&shy;pfanne'}
+	, { html: 'In&shy;dische Ge&shy;mü&shy;se&shy;pfanne'}
+	, { html: 'Kür&shy;bis&shy;suppe'}
+	, { html: 'Blu&shy;men&shy;kohl&shy;suppe'}
+	, { html: 'Ge&shy;mü&shy;se&shy;auf&shy;lauf'}
+	, { html: 'Ofen&shy;ge&shy;mü&shy;se'}
+	, { html: 'Kar&shy;tof&shy;fel&shy;gra&shy;tin'}
 ];
 
 // meals = meals.slice(0,2);
