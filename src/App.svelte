@@ -3,6 +3,8 @@
 	import { menueVorschlag, waehleZufaelligesMenue , ablehnenUndNeuVorschlagen } from './Essen.js';
 	import Ratlos from './Ratlos.svelte';
 	import MenueVorschlag from './MenueVorschlag.svelte';
+	import AndersUeberlegenButton from './AndersUeberlegenButton.svelte';
+	import Button from './Button.svelte';
 	
 	let zufallsEssen;
 
@@ -16,17 +18,13 @@
 		waehleZufaelligesMenue();
 	}
 
-	function neuWuerfeln(schmecktHeuteNicht) {
-		ablehnenUndNeuVorschlagen(schmecktHeuteNicht);
-	}
-
 </script>
 
 <main>
 	{#if start}
 		<h1>Was essen wir heute?</h1>
 
-		<button class="highlight" on:click={starte}>Sag's mir!</button>
+		<Button on:click={starte}>Sag's mir!</Button>
 	{:else}
 		{#if !zufallsEssen}
 			<Ratlos />
@@ -34,9 +32,7 @@
 			<div id="aussuchen" transition:fade="{{ duration: 500 }}">
 				<h1>Heute essen wir <br /><MenueVorschlag /></h1>
 
-				<button on:click={neuWuerfeln(zufallsEssen)}>
-					Nee, was andreres
-				</button>
+				<AndersUeberlegenButton />
 			</div>
 		{/if}
 	{/if}
@@ -55,13 +51,6 @@
 		flex-direction: column;
 		justify-content: space-between;
 		height: 93%;
-	}
-
-	button {
-		background-color: #444;
-		color: #bbb;
-		border: 1px solid black;
-		height: 4rem;
 	}
 
 	@media (min-width: 640px) {
