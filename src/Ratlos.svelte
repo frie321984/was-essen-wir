@@ -5,12 +5,18 @@
 	let essenUnbekannt = true;
 	const unsub = menueVorschlag.subscribe(v => essenUnbekannt = !v);
 </script>
+<style>
+	p {
+		font-weight: bold;
+		font-size: 1rem;
+	}
+</style>
 
 {#if essenUnbekannt}
 	<h1>Jetzt weiß ich auch nix mehr... 😒</h1>
 				
-	<h2>Schau halt mal hier: 
+	<p>Schau halt mal hier:<br>
 		<a href="https://www.chefkoch.de/rezept-des-tages/"
 			>Rezept des Tages</a>
-	</h2>
+	</p>
 {/if}

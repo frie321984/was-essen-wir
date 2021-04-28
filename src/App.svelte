@@ -27,9 +27,8 @@
 <style>
 	main {
 		text-align: center;
-		padding: 1em;
 		margin: 0 auto;
-		height: 100%;
+		height: 96%;
 	}
 	@media (min-width: 640px) {
 		main {
