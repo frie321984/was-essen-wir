@@ -20,14 +20,7 @@
 		<Button on:click={starte}>Sag's mir!</Button>
 	{:else}
 		<Ratlos />
-		
-		<div id="aussuchen" 
-			in:fade="{{ duration: 500 }}"
-		>
-			<h1>Heute essen wir <br /><MenueVorschlag /></h1>
-
-			<AndersUeberlegenButton />
-		</div>
+		<MenueVorschlag />
 	{/if}
 </main>
 
@@ -38,14 +31,6 @@
 		margin: 0 auto;
 		height: 100%;
 	}
-
-	#aussuchen {
-		display: flex;
-		flex-direction: column;
-		justify-content: space-between;
-		height: 93%;
-	}
-
 	@media (min-width: 640px) {
 		main {
 			max-width: 640px;
