@@ -35,9 +35,4 @@
 			max-width: 640px;
 		}
 	}
-	@media (max-width: 640px) {
-		h1 {
-			font-size: 2rem;
-		}
-	}
 </style>

@@ -12,17 +12,6 @@
 	span {
 		text-transform: none;
 		font-weight: bold;
-		font-size: 3rem;
-	}
-	@media (max-width: 640px) {
-		span {
-			font-size: 2rem;
-		}
-	}
-	@media (max-width: 640px) {
-		h1 {
-			font-size: 2rem;
-		}
 	}
 	#aussuchen {
 		display: flex;
