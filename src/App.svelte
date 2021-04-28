@@ -13,7 +13,6 @@
 	}
 </script>
 
-<main>
 	{#if start}
 		<h1>Was essen wir heute?</h1>
 
@@ -22,17 +21,3 @@
 		<Ratlos />
 		<MenueVorschlag />
 	{/if}
-</main>
-
-<style>
-	main {
-		text-align: center;
-		margin: 0 auto;
-		height: 96%;
-	}
-	@media (min-width: 640px) {
-		main {
-			max-width: 640px;
-		}
-	}
-</style>

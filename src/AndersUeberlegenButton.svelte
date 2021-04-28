@@ -3,8 +3,6 @@
 	import Button from './Button.svelte';
 </script>
 
-<main>
 	<Button on:click={ablehnenUndNeuVorschlagen}>
 		Nee, was andreres
 	</Button>
-</main>
