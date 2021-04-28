@@ -43,11 +43,16 @@ let meals = [
 	, 'Kar&shy;tof&shy;fel&shy;gra&shy;tin'
 ];
 
+// meals = meals.slice(0,2);
+
 export function waehleZufaelligesMenue() {
 	menueVorschlag.update(_ => meals[Math.floor(Math.random() * meals.length)]);
 }
 
-export function ablehnenUndNeuVorschlagen(schmecktHeuteNicht) {
-	meals = meals.filter(meal => meal != schmecktHeuteNicht);
+let aktuellerVorschlag;
+menueVorschlag.subscribe(v => aktuellerVorschlag = v);
+
+export function ablehnenUndNeuVorschlagen() {
+	meals = meals.filter(meal => meal != aktuellerVorschlag);
 	waehleZufaelligesMenue();
 }
