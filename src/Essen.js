@@ -27,7 +27,7 @@ let meals = [
 	, { html: 'Ser&shy;vietten&shy;knö&shy;del'}
 	, { name: 'Salat'}
 	, { html: 'Penne mit Zu&shy;cchi&shy;ni'}
-	, { html: 'Lin&shy;sen&shy;sup&shy;pe'}
+	, { name: 'Linsensuppe', html: 'Lin&shy;sen&shy;sup&shy;pe'}
 	, { html: 'ge&shy;bra&shy;ten&shy;er Reis mit Ge&shy;mü&shy;se'}
 	, { html: '"Blut&shy;suppe"'}
 	, { html: 'Pick&shy;nick'}
@@ -36,11 +36,18 @@ let meals = [
 	, { html: 'Rahm&shy;wir&shy;sing'}
 	, { html: 'Thai Ge&shy;mü&shy;se&shy;pfanne'}
 	, { html: 'In&shy;dische Ge&shy;mü&shy;se&shy;pfanne'}
-	, { html: 'Kür&shy;bis&shy;suppe'}
+	, { name: 'Kürbissuppe', html: 'Kür&shy;bis&shy;suppe'}
 	, { html: 'Blu&shy;men&shy;kohl&shy;suppe'}
 	, { html: 'Ge&shy;mü&shy;se&shy;auf&shy;lauf'}
 	, { html: 'Ofen&shy;ge&shy;mü&shy;se'}
 	, { html: 'Kar&shy;tof&shy;fel&shy;gra&shy;tin'}
+	, { name: 'Spinatlasagne', html: 'Spinatlasagne'}
+	, { name: 'Chili con Carne', html: 'Chili con Carne'}
+	, { name: 'Schnitzel mit Pommes', html: 'Schnitzel mit Pommes'}
+	, { name: 'Ratatouille', html: 'Ratatouille'}
+	, { name: 'Kartoffelpuffer mit Apfelmus', html: 'Kartoffelpuffer mit Apfelmus'}
+	, { name: 'Tacos', html: 'Tacos'}
+	, { name: 'Burger', html: 'Burger'}
 ];
 
 // meals = meals.slice(0,2);
