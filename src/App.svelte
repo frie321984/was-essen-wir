@@ -2,8 +2,9 @@
     import {mealList, same, zufall} from './Essen.js';
 
     let menu=[]
-    const neuesEssen =(menu=[], maxSuess=1)=> {
-        let gibtSchonWasSuesses = menu.filter(item => item.suess).length >= maxSuess;
+    let maxSuess = 1;
+    const neuesEssen =(menu=[], maxSuess1=maxSuess)=> {
+        let gibtSchonWasSuesses = menu.filter(item => item.suess).length >= maxSuess1;
         let availableMeals = mealList
             .filter(x => menu.filter(y => same(x, y).length > 0))
             .filter(x => !gibtSchonWasSuesses || !x.suess);
@@ -20,6 +21,9 @@
     td, th {
         width: 14.2%;
     }
+    td.suess {
+        border: 1px solid red;
+    }
     @media print {
         table button
         , h1
@@ -27,6 +31,7 @@
     }
 </style>
 <h1>Essensplan</h1>
+
 <table>
     <tr>
         <th>Di</th>
@@ -39,7 +44,7 @@
     </tr>
     <tr>
         {#each menu as item}
-            <td>
+            <td class="{item.suess ? 'suess' : ''}">
                 {#if item.html}
                     {@html item.html}
                 {:else}
@@ -58,6 +63,10 @@
         {/each }
     </tr>
 </table>
+
+<p class="suess">
+    <label for="maxSuess">Maximale Anzahl Süßspeise</label><input type="number" id="maxSuess" bind:value={maxSuess}>
+</p>
 
 {#each menu as item, i}
     {#if item.zutaten }
