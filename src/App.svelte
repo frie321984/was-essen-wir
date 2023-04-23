@@ -1,11 +1,17 @@
 <script>
-    import {mealList, same, waehleZufaelligesMenue, zufall, zufallsEssen} from './Essen.js';
+    import {mealList, same, zufall} from './Essen.js';
 
-    waehleZufaelligesMenue();
     let menu=[]
-
+    const neuesEssen =(menu=[], maxSuess=1)=> {
+        let gibtSchonWasSuesses = menu.filter(item => item.suess).length >= maxSuess;
+        let availableMeals = mealList
+            .filter(x => menu.filter(y => same(x, y).length > 0))
+            .filter(x => !gibtSchonWasSuesses || !x.suess);
+        console.debug(availableMeals)
+        return zufall(availableMeals);
+    }
     for (let i=0;i<7;i++) {
-        menu[i] = zufallsEssen()
+        menu[i] = neuesEssen(menu)
     }
     console.log(menu)
 </script>
@@ -46,8 +52,7 @@
         {#each menu as item, i}
             <td>
                 <button on:click={() => {
-                    menu[i] = zufall(mealList
-                        .filter(x => menu.filter(y => same(x,y).length>0)))
+                    menu[i] = neuesEssen(menu)
                 }}>Ändern (zufällig)</button>
             </td>
         {/each }

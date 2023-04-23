@@ -7,9 +7,9 @@ let meals = [
 	, { name: 'falsches Frühstück', html: 'fal&shy;sches Früh&shy;stück' }
 	, { name: 'Rosmarinkartoffeln', html: 'Ros&shy;ma&shy;rin&shy;kar&shy;toffeln', zutaten: ['Kartoffeln', 'Rosmarin'] }
 	, { name: 'Spinat, Kartoffelbrei & Fischstäbchen', html: 'Spinat, Kar&shy;toffel&shy;brei & Fisch&shy;stäb&shy;chen', zutaten: ['Spinat', 'Eier', 'Kartoffelbrei', 'Milch', 'Zwiebeln']}
-	, { name: 'Eierkuchen', html: 'Ei&shy;er&shy;ku&shy;chen'}
+	, { name: 'Eierkuchen', suess: true, html: 'Ei&shy;er&shy;ku&shy;chen'}
 	, { html: 'Brot'}
-	, { name: 'Kaiserschmarrn', html: 'Kai&shy;ser&shy;schmarrn'}
+	, { name: 'Kaiserschmarrn', suess: true, html: 'Kai&shy;ser&shy;schmarrn'}
 	, { name: 'Pizza'}
 	, { name: 'Nudeln mit Tomatensauce', html: 'Nudeln mit To&shy;ma&shy;ten&shy;sauce'}
 	, { html: 'Brat&shy;kar&shy;toffeln'}
@@ -18,8 +18,8 @@ let meals = [
 	, { html: 'La&shy;sa&shy;gne'}
 	, { html: 'Kä&shy;se&shy;spät&shy;zle'}
 	, { html: 'Bur&shy;ger'}
-	, { html: 'Milch&shy;reis'}
-	, { name: 'Waffeln'}
+	, { html: 'Milch&shy;reis', suess: true,}
+	, { name: 'Waffeln', suess: true,}
 	, { html: 'Ge&shy;mü&shy;se&shy;pfan&shy;ne'}
 	, { name: 'Thai Aroi'}
 	, { html: 'In&shy;disch be&shy;stel&shy;len'}
@@ -45,7 +45,7 @@ let meals = [
 	, { name: 'Chili con Carne', html: 'Chili con Carne'}
 	, { name: 'Schnitzel mit Pommes', html: 'Schnitzel mit Pommes'}
 	, { name: 'Ratatouille', html: 'Ratatouille'}
-	, { name: 'Kartoffelpuffer mit Apfelmus', html: 'Kartoffelpuffer mit Apfelmus'}
+	, { name: 'Kartoffelpuffer mit Apfelmus',suess: true, html: 'Kartoffelpuffer mit Apfelmus'}
 	, { name: 'Tacos', html: 'Tacos'}
 	, { name: 'Burger', html: 'Burger'}
 ];
