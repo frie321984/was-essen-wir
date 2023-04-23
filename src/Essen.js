@@ -3,10 +3,10 @@ import { writable } from 'svelte/store';
 export const menueVorschlag = writable(0);
 
 let meals = [
-	{ name: 'Döner' }
+	{ name: 'Döner', html: 'D&ouml;&shy;ner', zutaten: ['Seitan', 'Fladenbrot', 'Zwiebeln', 'Tomaten', 'Salat', 'Gewürzgurken', 'Majo', 'Ketchup', 'Joghurt'] }
 	, { name: 'falsches Frühstück', html: 'fal&shy;sches Früh&shy;stück' }
-	, { name: 'Rosmarinkartoffeln', html: 'Ros&shy;ma&shy;rin&shy;kar&shy;toffeln' }
-	, { name: 'Spinat, Kartoffelbrei & Fischstäbchen', html: 'Spinat, Kar&shy;toffel&shy;brei & Fisch&shy;stäb&shy;chen'}
+	, { name: 'Rosmarinkartoffeln', html: 'Ros&shy;ma&shy;rin&shy;kar&shy;toffeln', zutaten: ['Kartoffeln', 'Rosmarin'] }
+	, { name: 'Spinat, Kartoffelbrei & Fischstäbchen', html: 'Spinat, Kar&shy;toffel&shy;brei & Fisch&shy;stäb&shy;chen', zutaten: ['Spinat', 'Eier', 'Kartoffelbrei', 'Milch', 'Zwiebeln']}
 	, { name: 'Eierkuchen', html: 'Ei&shy;er&shy;ku&shy;chen'}
 	, { html: 'Brot'}
 	, { name: 'Kaiserschmarrn', html: 'Kai&shy;ser&shy;schmarrn'}

@@ -15,7 +15,9 @@
         width: 14.2%;
     }
     @media print {
-        h1 { display:none;}
+        table button
+        , h1
+        { display:none;}
     }
 </style>
 <h1>Essensplan</h1>
@@ -51,3 +53,9 @@
         {/each }
     </tr>
 </table>
+
+{#each menu as item, i}
+    {#if item.zutaten }
+        {item.zutaten.join(', ')}
+    {/if}
+{/each}
