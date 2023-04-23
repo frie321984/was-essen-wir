@@ -50,10 +50,20 @@ let meals = [
 	, { name: 'Burger', html: 'Burger'}
 ];
 
+export const same = (x, y) => x.html === y.html && x.name === y.name
+
+export const mealList = meals;
+
 // meals = meals.slice(0,2);
 
+export const zufall = array => array[Math.floor(Math.random() * array.length)]
+
+export function zufallsEssen() {
+	return zufall(meals)
+}
+
 export function waehleZufaelligesMenue() {
-	menueVorschlag.update(_ => meals[Math.floor(Math.random() * meals.length)]);
+	menueVorschlag.update(_ => zufallsEssen());
 }
 
 let aktuellerVorschlag;

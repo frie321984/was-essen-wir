@@ -1,12 +1,13 @@
 <script>
-    import {menueVorschlag, waehleZufaelligesMenue} from './Essen.js';
+    import {mealList, same, waehleZufaelligesMenue, zufall, zufallsEssen} from './Essen.js';
 
     waehleZufaelligesMenue();
     let menu=[]
-    menueVorschlag.subscribe(v => {
-        menu.push(v)
-    });
-    for (let i=1;i<7;i++) waehleZufaelligesMenue();
+
+    for (let i=0;i<7;i++) {
+        menu[i] = zufallsEssen()
+    }
+    console.log(menu)
 </script>
 
 <style>
@@ -43,8 +44,9 @@
         {#each menu as item, i}
             <td>
                 <button on:click={() => {
-                    console.log('click', item)
-                }}>Neu {i}</button>
+                    menu[i] = zufall(mealList
+                        .filter(x => menu.filter(y => same(x,y).length>0)))
+                }}>Ändern (zufällig)</button>
             </td>
         {/each }
     </tr>
