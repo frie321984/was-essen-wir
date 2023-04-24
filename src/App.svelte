@@ -15,6 +15,7 @@
         menu[i] = neuesEssen(menu)
     }
     console.log(menu)
+    let dbg=false;
 </script>
 
 <style>
@@ -73,3 +74,10 @@
         {item.zutaten.join(', ')}
     {/if}
 {/each}
+
+<!-- for development -->
+{#if dbg}
+    {#each mealList.sort((a,b) => a.html>b.html?1:a.html===b.html?0:-1) as item, i}
+        <p>{@html item.html }</p>
+    {/each}
+{/if}
