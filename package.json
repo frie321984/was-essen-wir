@@ -1,7 +1,14 @@
 {
-  "name": "svelte-app",
+  "name": "essensplan",
+  "author": {
+    "name": "Friederike Schertel",
+    "url": "https://friederike.schertel.org"
+  },
+  "homepage": "https://github.com/frie321984/was-essen-wir/",
+  "description": "Essensplan schlägt ein Menü für die Woche vor damit die Einkäufe für die Woche besser planen kann.",
+  "license": "GPL v3",
   "version": "1.0.0",
-  "private": true,
+  "private": false,
   "scripts": {
     "build": "rollup -c",
     "dev": "rollup -c -w",
