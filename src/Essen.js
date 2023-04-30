@@ -4,15 +4,16 @@ export const menueVorschlag = writable(0);
 
 let meals = [
 	{ name: 'Döner', html: 'D&ouml;&shy;ner', zutaten: ['Seitan', 'Fladenbrot', 'Zwiebeln', 'Tomaten', 'Salat', 'Gewürzgurken', 'Majo', 'Ketchup', 'Joghurt'] }
-	, { name: 'falsches Frühstück', html: 'fal&shy;sches Früh&shy;stück' }
+	, { name: 'Frühstück', html: 'Früh&shy;stück' }
 	, { name: 'Rosmarinkartoffeln', html: 'Ros&shy;ma&shy;rin&shy;kar&shy;toffeln', zutaten: ['Kartoffeln', 'Rosmarin'] }
 	, { name: 'Spinat, Kartoffelbrei & Fischstäbchen', html: 'Spinat, Kar&shy;toffel&shy;brei & Fisch&shy;stäb&shy;chen', zutaten: ['Spinat', 'Eier', 'Kartoffelbrei', 'Milch', 'Zwiebeln']}
 	, { name: 'Eierkuchen', suess: true, html: 'Ei&shy;er&shy;ku&shy;chen'}
-	, { html: 'Brot'}
+	, { name: 'Brot', html: 'Brot'}
 	, { name: 'Kaiserschmarrn', suess: true, html: 'Kai&shy;ser&shy;schmarrn'}
 	, { name: 'Pizza'}
 	, { name: 'Pizzaschnecken'}
 	, { html: 'Essen gehen' }
+	, { html: 'Essen bestellen' }
 	, { html: 'Grie&szlig;&shy;brei', suess: true }
 	, { name: 'Nudeln mit Tomatensauce', html: 'Nudeln mit To&shy;ma&shy;ten&shy;sauce'}
 	, { name: 'Spaghetti Bolognese', html: 'Spaghet&shy;ti Bo&shy;logne&shy;se'}
@@ -25,7 +26,6 @@ let meals = [
 	, { html: 'Milch&shy;reis', suess: true,}
 	, { name: 'Waffeln', suess: true,}
 	, { html: 'Ge&shy;mü&shy;se&shy;pfan&shy;ne'}
-	, { name: 'Thai Aroi'}
 	, { html: 'In&shy;disch be&shy;stel&shy;len'}
 	, { html: 'Nu&shy;del&shy;suppe'}
 	, { html: 'Ser&shy;vietten&shy;knö&shy;del'}
@@ -55,12 +55,11 @@ let meals = [
 	, { name: 'Chili con/sin Carne', html: 'Chili con/sin Carne'}
 	, { name: 'Schnitzel mit Pommes', html: 'Schnitzel mit Pommes'}
 	, { name: 'Ratatouille', html: 'Ratatouille'}
-	, { name: 'Kartoffelpuffer mit Apfelmus',suess: true, html: 'Kartoffelpuffer mit Apfelmus'}
-	, { name: 'Tacos', html: 'Tacos'}
+	, { name: 'Kartoffelpuffer mit Apfelmus', suess: true, html: 'Kartoffelpuffer mit Apfelmus'}
 	, { html: 'Eintopf mit Kicher&shy;erbsen'}
 	, { html: 'Lachsnudeln'}
 	, { html: 'Zucchininudeln (Jamie Oliver)'}
-	, { html: 'Hünchen mit Lauch (Jamie Oliver)'}
+	, { html: 'Hühnchen mit Lauch (Jamie Oliver)'}
 	, { name: 'Burger', html: 'Burger'}
 	, { html: 'Sandwiches'}
 	, { html: 'Mac\'n\'Cheese'}

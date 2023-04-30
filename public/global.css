@@ -20,6 +20,9 @@ table td, table th {
 	font-size: 1.6rem;
 	padding: .9rem;
 }
+td {
+	height: 9rem;
+}
 th {
 	color: #f66f00;
 	text-transform: uppercase;
