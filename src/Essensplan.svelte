@@ -3,19 +3,29 @@
 
     let menu=[]
     let maxSuess = 1;
-    const neuesEssen =(menu=[], maxSuess1=maxSuess)=> {
-        let gibtSchonWasSuesses = menu.filter(item => item.suess).length >= maxSuess1;
+    let dbg=false;
+
+    // disable output when not debugging
+    if (!dbg) { 
+        const noop = (m, ...opt)=> {}
+        console.debug = noop
+        console.info = noop
+    }
+
+    const neuesEssen =(bisherigesMenu=[], maxSuess1=maxSuess)=> {
+        console.debug('bisher', bisherigesMenu.map(x => x.name || x.html))
+
+        let gibtSchonGenugSuesskram = bisherigesMenu.filter(item => item.suess).length >= maxSuess1;
         let availableMeals = mealList
-            .filter(x => menu.filter(y => same(x, y).length > 0))
-            .filter(x => !gibtSchonWasSuesses || !x.suess);
-        console.debug(availableMeals)
+            .filter(x => bisherigesMenu.filter(y => same(x, y)).length == 0)
+            .filter(x => !gibtSchonGenugSuesskram || !x.suess);
+        console.debug(availableMeals.map(x => x.name || x.html))
         return zufall(availableMeals);
     }
     for (let i=0;i<7;i++) {
         menu[i] = neuesEssen(menu)
     }
-    console.log(menu)
-    let dbg=false;
+    console.debug(menu)
 </script>
 
 <style>
