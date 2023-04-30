@@ -1,6 +1,6 @@
-import App from './App.svelte';
+import Essensplan from './Essensplan.svelte';
 
-const app = new App({
+const app = new Essensplan({
 	target: document.body,
 	props: {
 	}

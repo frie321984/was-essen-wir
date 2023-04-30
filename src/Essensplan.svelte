@@ -59,7 +59,7 @@
             <td>
                 <button on:click={() => {
                     menu[i] = neuesEssen(menu)
-                }}>Ändern (zufällig)</button>
+                }}>🆕</button>
             </td>
         {/each }
     </tr>
@@ -69,14 +69,15 @@
     <label for="maxSuess">Maximale Anzahl Süßspeise</label><input type="number" id="maxSuess" bind:value={maxSuess}>
 </p>
 
-{#each menu as item, i}
-    {#if item.zutaten }
-        {item.zutaten.join(', ')}
-    {/if}
-{/each}
-
 <!-- for development -->
 {#if dbg}
+
+    {#each menu as item, i}
+        {#if item.zutaten }
+            {item.zutaten.join(', ')}
+        {/if}
+    {/each}
+
     {#each mealList.sort((a,b) => a.html>b.html?1:a.html===b.html?0:-1) as item, i}
         <p>{@html item.html }</p>
     {/each}
