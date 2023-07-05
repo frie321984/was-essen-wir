@@ -19,7 +19,7 @@ let meals = [
 	, { name: 'Spaghetti Bolognese', html: 'Spaghet&shy;ti Bo&shy;logne&shy;se'}
 	, { html: 'Brat&shy;kar&shy;toffeln'}
 	, { html: 'Ge&shy;mü&shy;se&shy;sup&shy;pe'}
-	, { html: 'Au&shy;ber&shy;gi&shy;nen ara&shy;bisch'}
+	, { html: 'Au&shy;ber&shy;gi&shy;nen ara&shy;bisch', url: 'banjan boranee, chefkoch'}
 	, { html: 'La&shy;sa&shy;gne'}
 	, { html: 'Kä&shy;se&shy;spät&shy;zle'}
 	, { html: 'Bur&shy;ger'}
