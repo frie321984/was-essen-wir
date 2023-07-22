@@ -92,3 +92,7 @@
         <p>{@html item.html }</p>
     {/each}
 {/if}
+
+<footer>
+<a href="essensplan-leer.pdf">Vorlage zum Ausdrucken</a>
+</footer>
